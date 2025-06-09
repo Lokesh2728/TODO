@@ -1,5 +1,4 @@
 # ✅ SmartTask - A Minimalist To-Do List App
-
 > A simple, elegant to-do list web application built with Django, supporting user registration, login, and full CRUD functionality. Whether you're managing daily tasks or conquering world domination — SmartTask has you covered.
 
 ---
