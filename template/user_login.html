@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Login</title> 
+{% endblock %}
+
+{% load static %}
+
+{% block css %} 
+<link rel="stylesheet" href="{% static 'css/user_login.css' %}">
+{% endblock %}
+
+{% block content  %}
+
+<center>
+        <h1>User Login Page</h1>
+        <form  method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <legend>Username
+            <input type="text" name="username" id="username" placeholder="Username" required>
+            </legend>
+            <br><br>
+            <legend>Password
+            <input type="password" name="password" id="password" placeholder="Password" required>
+            </legend>
+            <br><br>
+            <input type="submit" value="Login" >
+        </form>
+{% endblock %}

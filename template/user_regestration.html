@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load custom_filters %}
+{% load static %}
+
+{% block title %}
+ <title>
+    User Registration
+ </title>
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/user_regestration.css' %}">
+{% endblock %}
+    
+    {% block content %}
+<center>
+    <h1>Registration Page</h1>
+    <form method="POST">
+        {% csrf_token %}
+         {{ EUFO.username.label_tag }}<br>
+        {{ EUFO.username }}<br>
+        {{ EUFO.password.label_tag }}<br>
+        {{ EUFO.password }}<br>
+        
+
+        <button type="submit" class="btn btn-primary">register</button>
+    </form>
+</center>
+    
+    {% endblock %}
